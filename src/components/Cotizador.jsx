@@ -1,4 +1,4 @@
-import Selector from "./selector";
+import Selector from "./Selector.jsx";
 import datosSeguro from "../datosSeguro.json";
 import { useState } from "react";
 import { toast, ToastContainer, Slide } from "react-toastify";
