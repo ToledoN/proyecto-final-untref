@@ -1,0 +1,94 @@
+[
+    {
+        "categoria": "marca",
+        "id": "Audi",
+        "factor": 1.20
+    },
+    {
+        "categoria": "marca",
+        "id": "Aston Martin",
+        "factor": 1.35
+    },
+    {
+        "categoria": "marca",
+        "id": "BMW",
+        "factor": 1.25
+    },
+    {
+        "categoria": "marca",
+        "id": "Dodge",
+        "factor": 1.10
+    },
+    {
+        "categoria": "marca",
+        "id": "Ferrari",
+        "factor": 1.60
+    },
+    {
+        "categoria": "marca",
+        "id": "Lamborghini",
+        "factor": 1.90
+    },
+    {
+        "categoria": "marca",
+        "id": "Mercedes-Benz",
+        "factor": 1.80
+    },
+
+
+
+    
+    {
+        "categoria": "tipo",
+        "id": "Convertible",
+        "factor": 1.40
+    },
+    {
+        "categoria": "tipo",
+        "id": "Coupé",
+        "factor": 1.30
+    },
+    {
+        "categoria": "tipo",
+        "id": "Hatchback",
+        "factor": 1.15
+    },
+    {
+        "categoria": "tipo",
+        "id": "Sedán",
+        "factor": 1.05
+    },
+    {
+        "categoria": "tipo",
+        "id": "SUV",
+        "factor": 1.20
+    },
+
+
+    {
+        "categoria": "año",
+        "id": "2019 o anterior",
+        "factor": 1.00
+    },
+    {
+        "categoria": "año",
+        "id": "2020",
+        "factor": 1.05
+    },
+    {
+        "categoria": "año",
+        "id": "2021",
+        "factor": 1.10
+    },
+    {
+        "categoria": "año",
+        "id": "2022",
+        "factor": 1.15
+    },
+    {
+        "categoria": "año",
+        "id": "2023",
+        "factor": 1.20
+    }
+
+]

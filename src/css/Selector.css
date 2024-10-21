@@ -1,0 +1,22 @@
+.selector {
+    margin:15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+input {
+    margin-left: 10px;
+}
+
+@media (max-width: 600px) {
+ .selector {
+     display: flex;
+     flex-direction: column;
+ }
+}
+    

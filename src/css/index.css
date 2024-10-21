@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  font-family: Montserrat, sans-serif;
+}
+
+#home {
+  background-color: rgb(223, 223, 223);
+  position: absolute;
+  z-index: -1;
+}
+.btn {
+  border-color: black;
+  text-transform: uppercase;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  border-color: white;
+  background-color: black;
+  color: white;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1000px;
+  }
+}
+
+.container-fluid {
+  --bs-gutter-x: 0;
+}
