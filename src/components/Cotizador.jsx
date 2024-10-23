@@ -1,6 +1,6 @@
 import Selector from "./Selector.jsx";
 import datosSeguro from "../datosSeguro.json";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { toast, ToastContainer, Slide } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Swal from "sweetalert2";
@@ -16,7 +16,6 @@ function Cotizador() {
   const [tieneModificaciones, setTieneModificaciones] = useState(false);
 
   // Estado para almacenar el precio calculado
-  const [seguroPrecio, setSeguroPrecio] = useState(null);
 
   // Estado para almacenar si se realizó una cotización
   const [cotizado, setCotizado] = useState(false);
@@ -35,7 +34,7 @@ function Cotizador() {
 
   // Función para cotizar en base a lo elegido
 
-  const realizarCotizacion = () => {
+  const seguroPrecio = useMemo(() => {
     let precio = 160000;
 
     precio = precio * marcaSeleccionada * tipoSeleccionado * anioSeleccionado;
@@ -47,9 +46,13 @@ function Cotizador() {
       precio = precio * modificacionesFactor;
     }
 
-    setSeguroPrecio(precio.toFixed(0));
-    setCotizado(true);
-  };
+    return precio.toFixed(0);
+  }, [
+    marcaSeleccionada,
+    tipoSeleccionado,
+    anioSeleccionado,
+    tieneModificaciones,
+  ]);
 
   // Validación de datos
   const datosCompletos = () =>
@@ -69,7 +72,7 @@ function Cotizador() {
 
   const handleCotizacionClick = () => {
     // Si los datos están completos, cotizar; si no, alerta
-    datosCompletos() ? realizarCotizacion() : alertaError();
+    datosCompletos() ? setCotizado(true) : alertaError();
   };
 
   // En base al factor seleccionado, obtener ID para guardar en el historial
@@ -153,7 +156,13 @@ function Cotizador() {
           <div className="pt-4 d-flex flex-column text-center">
             <h2 className="fs-5">Precio del seguro: </h2>
             <h1>
-              <CountUp start={0} end={seguroPrecio} duration={1} prefix="$">
+              <CountUp
+                start={0}
+                end={seguroPrecio}
+                duration={1}
+                delay={0}
+                prefix="$"
+              >
                 {({ countUpRef }) => (
                   <div className="pb-4">
                     <span ref={countUpRef} />

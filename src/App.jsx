@@ -6,7 +6,7 @@ import Cotizador from "./components/Cotizador";
 function App() {
   return (
     <div>
-      <BrowserRouter>
+      <BrowserRouter basename="/proyecto-final-untref">
         <Routes>
           <Route path="/" element={<Home />}>
             <Route path="historial" element={<Historial />} />
